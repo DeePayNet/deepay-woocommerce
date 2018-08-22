@@ -3,7 +3,7 @@ namespace Deepay;
 
 class Deepay
 {
-    const VERSION           = '3.0.0';
+    const VERSION           = '1.0.0';
     const USER_AGENT_ORIGIN = 'Deepay PHP Library';
 
     public static $api_key  = '';
@@ -11,7 +11,7 @@ class Deepay
     public static $user_agent  = '';
     public static $curlopt_ssl_verifypeer = FALSE;
     // private static $api_url = "https://deepay.net";
-    private static $api_url = "http://cryptopay.local.com";
+    private static $api_url = "http://cryptopay.demo.mopaoshu.com";
 
     public static function config($authentication)
     {
@@ -33,14 +33,14 @@ class Deepay
         }
 
         # Check if right environment passed
-        $environments = array('live', 'test');
+        $environments = array('live');
 
         if (!in_array($environment, $environments)) {
             $availableEnvironments = join(', ', $environments);
             \Deepay\Exception::throwException(400, array('reason' => 'BadEnvironment', 'message' => "Environment does not exist. Available environments: $availableEnvironments"));
         }
 
-        $url       = ($environment === 'test' ? self::$test_url : self::$api_url) . $url;
+        $url       = self::$api_url . $url;
         $headers   = array();
 
         $curl      = curl_init();
