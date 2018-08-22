@@ -22,5 +22,3 @@ Sign up for Deepay account at <https://deepay.net> for production.
 5. Enter [API Credentials](https://deepay.net) (*App ID*, *Api Key*, *Api Secret*) data to WooCommerce-Coingate Plugin Settings: *Admin » WooCommerce* click on **Checkout** tab find **Deepay** in Payment Gateways table and click **Settings**.
 
 6. Don't forget check **Enable Cryptocurrency payments via Deepay** checkbox in WooCommerce-Coingate Plugin settings.
-
-5. Don't forget check ***Enable Cryptocurrency payments via Deepay** checkbox in WooCommerce-Coingate Plugin settings.
